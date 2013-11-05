@@ -1,4 +1,9 @@
 Flipper::Application.routes.draw do
+  match 'users/follow' => 'users#follow'
+
+  resources :friendships
+
+
   devise_for :users
 
   resources :flips
